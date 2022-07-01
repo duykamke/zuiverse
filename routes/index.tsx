@@ -21,7 +21,7 @@ export default function MainPage(props: PageProps) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={props.url.href} />
       </Head>
-      <div> class={tw`flex flex-col min-h-screen`}
+      <div class={tw`flex flex-col min-h-screen`}>
         <div>
           <Header />
         </div>
