@@ -31,7 +31,8 @@ export const config: Configuration = {
     },
   }),
   plugins: {
-    cursor: `after(block content-[''] absolute w-1 h-full bg-white animation-cursor will-change-[opacity])`
+    cursor:
+      `after(block content-[''] absolute w-1 h-full bg-white animation-cursor will-change-[opacity])`,
   },
   theme: {
     extend: {
@@ -84,7 +85,11 @@ export const config: Configuration = {
         },
       },
       animation: {
-        type: 'type 2.7s ease-out .8s infinite alternate both',
+        type: "type 2.7s ease-out .8s infinite alternate both",
+        "type-text": "type-text 2.7s ease-out .8s infinite alternate both",
+        "gradient-x": "gradient-x 15s ease infinite",
+        "gradient-y": "gradient-y 15s ease infinite",
+        "gradient-xy": "gradient-xy 15s ease infinite",
       },
       keyframes: {
         cursor: {
@@ -96,8 +101,8 @@ export const config: Configuration = {
           },
         },
         type: {
-          "0%": { transform: "translateX(0ch)", transition: 'width' },
-          "5%, 10%": { transform: "translateX(1ch)", width: '1ch' },
+          "0%": { transform: "translateX(0ch)" },
+          "5%, 10%": { transform: "translateX(1ch)" },
           "15%, 20%": { transform: "translateX(2ch)" },
           "25%, 30%": { transform: "translateX(3ch)" },
           "35%, 40%": { transform: "translateX(4ch)" },
@@ -107,6 +112,49 @@ export const config: Configuration = {
           "75%, 80%": { transform: "translateX(8ch)" },
           "85%, 90%": { transform: "translateX(9ch)" },
           "95%, 100%": { transform: "translateX(11ch)" },
+        },
+        "type-text": {
+          "0%": { width: "0ch" },
+          "5%, 10%": { width: "1ch" },
+          "15%, 20%": { width: "2ch" },
+          "25%, 30%": { width: "3ch" },
+          "35%, 40%": { width: "4ch" },
+          "45%, 50%": { width: "5ch" },
+          "55%, 60%": { width: "6ch" },
+          "65%, 70%": { width: "7ch" },
+          "75%, 80%": { width: "8ch" },
+          "85%, 90%": { width: "9ch" },
+          "95%, 100%": { width: "11ch" },
+        },
+        "gradient-y": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "center top",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "center center",
+          },
+        },
+        "gradient-x": {
+          "0%, 100%": {
+            "background-size": "200% 100%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "100% 200%",
+            "background-position": "right center",
+          },
+        },
+        "gradient-xy": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
         },
       },
     },
