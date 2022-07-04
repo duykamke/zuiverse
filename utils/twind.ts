@@ -10,6 +10,7 @@ export const config: Configuration = {
       `url(//fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100)`,
     body: {
       "@apply": "min-h-screen bg-eerie-700 text-alice-100 antialiased",
+      cursor: "url('pointers/heart.png'), default",
       h1: {
         "@apply": "text-[48px] font-black leading-[56.26px]",
       },
@@ -30,10 +31,6 @@ export const config: Configuration = {
       },
     },
   }),
-  plugins: {
-    cursor:
-      `after(block content-[''] absolute w-1 h-full bg-white animation-cursor will-change-[opacity])`,
-  },
   theme: {
     extend: {
       fontFamily: {
@@ -84,9 +81,12 @@ export const config: Configuration = {
           700: "#D64545",
         },
       },
+      transitionProperty: {
+          width: "width"
+      },
       animation: {
-        type: "type 2.7s ease-out .8s infinite alternate both",
-        "type-text": "type-text 2.7s ease-out .8s infinite alternate both",
+        type: "type 3s ease-out 0.8s infinite alternate both",
+        "type-text": "type-text 3s ease-out 0.8s infinite alternate both",
         "gradient-x": "gradient-x 15s ease infinite",
         "gradient-y": "gradient-y 15s ease infinite",
         "gradient-xy": "gradient-xy 15s ease infinite",
@@ -110,8 +110,7 @@ export const config: Configuration = {
           "55%, 60%": { transform: "translateX(6ch)" },
           "65%, 70%": { transform: "translateX(7ch)" },
           "75%, 80%": { transform: "translateX(8ch)" },
-          "85%, 90%": { transform: "translateX(9ch)" },
-          "95%, 100%": { transform: "translateX(11ch)" },
+          "85%, 100%": { transform: "translateX(9ch)" },
         },
         "type-text": {
           "0%": { width: "0ch" },
@@ -123,8 +122,7 @@ export const config: Configuration = {
           "55%, 60%": { width: "6ch" },
           "65%, 70%": { width: "7ch" },
           "75%, 80%": { width: "8ch" },
-          "85%, 90%": { width: "9ch" },
-          "95%, 100%": { width: "11ch" },
+          "85%, 100%": { width: "9ch" },
         },
         "gradient-y": {
           "0%, 100%": {

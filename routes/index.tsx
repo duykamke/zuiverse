@@ -4,7 +4,7 @@ import { Fragment, h } from "preact";
 import { Head } from "$fresh/runtime.ts";
 import { PageProps } from "$fresh/server.ts";
 import Header from "../islands/Header.tsx";
-import LeftNav from "../islands/LeftNav.tsx";
+import CharNav from "../components/CharNav.tsx";
 import { tw } from "@twind";
 
 export default function MainPage(props: PageProps) {
@@ -22,12 +22,7 @@ export default function MainPage(props: PageProps) {
         <meta property="og:url" content={props.url.href} />
       </Head>
       <div class={tw`flex flex-col min-h-screen`}>
-        <div>
-          <Header />
-        </div>
-        <div class={tw`bg-neutral-500 flex flex-row py-4`}>
-          <LeftNav />
-        </div>
+        <Header activeRoute={props.route} title="Zuiverse!" />
       </div>
     </>
   );
