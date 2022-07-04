@@ -94,7 +94,7 @@ export default function CharNav(props: CharNavProps) {
                 z-50
                 pl-3
                 transform-gpu
-                rotate-45
+                rotate-90
                 origin-bottom-left
                 overflow-x-hidden
                 whitespace-nowrap
