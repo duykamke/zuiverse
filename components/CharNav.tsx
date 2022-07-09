@@ -1,14 +1,13 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from "preact";
-import { tw } from "@twind";
+import { useRouter } from "next/router";
+import { tw } from "twind";
 
-interface CharNavProps {
-  active: string;
-}
-
-export default function CharNav(props: CharNavProps) {
-  const alphabeticalSections = {
+export default function CharNav() {
+  const router = useRouter();
+  
+  const alphabeticalSections: Record<
+    string,
+    Array<{ name: string; link: string }>
+  > = {
     A: [
       {
         name: "about me",
@@ -73,14 +72,14 @@ export default function CharNav(props: CharNavProps) {
       inline-flex
       justify-between`}
     >
-      {Object.entries(alphabeticalSections).map((character) => {
+      {Object.entries(alphabeticalSections).map((character, characterIndex) => {
         return (
           <li
             className={tw`flex 
             cursor-pointer
             p-2
             group`}
-            key={character}
+            key={characterIndex}
           >
             <h4
               className={tw`

@@ -1,7 +1,4 @@
-/** @jsx h */
-import { ComponentChild, h, VNode } from "preact";
-import { IS_BROWSER } from "$fresh/runtime.ts";
-import { tw, apply } from "@twind";
+import { tw, apply } from "twind";
 
 const sizeMap = {
   sm: apply`text-xs py(2 md:1) px-2`,
@@ -34,17 +31,14 @@ interface ButtonProps {
   variant?: keyof typeof variantMap;
   round?: boolean,
   disabled?: boolean,
-  // deno-lint-ignore no-explicit-any
   className?: any,
-    // deno-lint-ignore no-explicit-any
-  children?: string|ComponentChild[]|VNode<any>|null|undefined,
+  children?: any,
 }
 
 export default function Button({
   size = 'md',
   variant = 'primary',
   round = false,
-  disabled = !IS_BROWSER,
   className,
   children
 }: ButtonProps) {
@@ -53,7 +47,6 @@ export default function Button({
   bg-${variantMap[variant]}(700 500(hover:& focus:&)))
   ${sizeMap[size]}
   rounded-${round ? "full" : "lg"}
-  ${disabled && "bg-neutral-500 text-neutral-300 cursor-not-allowed"}
 `;
   return (<button className={tw(instanceStyles, className)}>{children}</button>)
 }
