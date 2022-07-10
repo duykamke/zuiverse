@@ -32,14 +32,18 @@ export default function Header() {
           </span>
         </h2>
       </div>
-      <a
+      <h5
         className={tw`inline-flex justify-between items-center gap-2`}
-        href="https://fresh.deno.dev/"
-        target="_blank"
       >
-        <h5 className={tw`underline`}>built with Next.js + bun runtime</h5>
-        <img src="logo.svg" />
-      </a>
+        built with{" "}
+        <a className={tw`underline`} href="https://nextjs.org/" target="_blank">
+          Next.js
+        </a>{" "}
+        +{" "}
+        <a className={tw`underline`} href="https://bun.sh/" target="_blank">
+          bun
+        </a>
+      </h5>
     </div>
   );
 }

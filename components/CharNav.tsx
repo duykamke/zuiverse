@@ -3,7 +3,7 @@ import { tw } from "twind";
 
 export default function CharNav() {
   const router = useRouter();
-  
+
   const alphabeticalSections: Record<
     string,
     Array<{ name: string; link: string }>
@@ -88,10 +88,12 @@ export default function CharNav() {
               <span>{character[0]}</span>
               <span
                 className={tw`
+                inline-flex
+                divide-x-2
+                divide-yellow-300
                 absolute
                 -left-1
                 z-50
-                pl-3
                 transform-gpu
                 rotate-90
                 origin-bottom-left
@@ -109,15 +111,24 @@ export default function CharNav() {
                   let name = section.name;
                   if (sectionIndex < 1) {
                     name = name.substring(1);
-                    return <a href={section.link} key={section.name}>{name}</a>;
+                    return (
+                      <a
+                        className={tw`px-1`}
+                        href={section.link}
+                        key={`${characterIndex}-${sectionIndex}`}
+                      >
+                        {name}
+                      </a>
+                    );
                   } else {
                     return (
-                      <>
-                        <span>,&nbsp;</span>
-                        <a href={section.link} key={section.name}>
-                          {name}
-                        </a>
-                      </>
+                      <a
+                        className={tw`px-1`}
+                        href={section.link}
+                        key={`${characterIndex}-${sectionIndex}`}
+                      >
+                        {name}
+                      </a>
                     );
                   }
                 })}
