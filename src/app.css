@@ -1,0 +1,30 @@
+@import url(//fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+
+@tailwind base;
+
+@layer base {
+	body {
+		@apply min-h-screen bg-eerie-700 text-alice-100 antialiased;
+	}
+	h1 {
+		@apply text-[48px] font-black leading-[56.26px];
+	}
+	h2 {
+		@apply text-[32px] font-black leading-[37.5px];
+	}
+	h3 {
+		@apply text-[26px] font-black leading-[30.47px];
+	}
+	h4 {
+		@apply text-[17px] font-black leading-[19.92px];
+	}
+	h5 {
+		@apply text-[13px] font-bold leading-[15.23px];
+	}
+	p {
+		@apply text-[16px] font-normal leading-[18px];
+	}
+}
+
+@tailwind components;
+@tailwind utilities;
