@@ -10,8 +10,9 @@ const config = {
 	}),
 
 	kit: {
-		adapter: adapter(),
-		precompress: true,
+		adapter: adapter({
+			precompress: true,
+		}),
 
 		// Override http methods in the Todo forms
 		methodOverride: {
