@@ -16,7 +16,7 @@ specifiers:
   prettier: ^2.7.1
   prettier-plugin-svelte: ^2.7.0
   svelte: ^3.49.0
-  svelte-adapter-bun: 0.2.2-1
+  svelte-adapter-bun: 0.2.1
   svelte-check: ^2.8.0
   svelte-preprocess: ^4.10.7
   tailwindcss: ^3.1.5
@@ -42,7 +42,7 @@ devDependencies:
   prettier: 2.7.1
   prettier-plugin-svelte: 2.7.0_o3ioganyptcsrh6x4hnxvjkpqi
   svelte: 3.49.0
-  svelte-adapter-bun: 0.2.2-1
+  svelte-adapter-bun: 0.2.1
   svelte-check: 2.8.0_nxvsp6sjiltnatqa6jdm4mr6zu
   svelte-preprocess: 4.10.7_bgntxiihuqhg5mwaa7nczjwpga
   tailwindcss: 3.1.5
@@ -1940,8 +1940,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-adapter-bun/0.2.2-1:
-    resolution: {integrity: sha512-O98IzQfQNwwWwyp59QgztYY3kqwi4trRuO+gLejpi0lpZpLLES9OETqVjaIRSW0t5uG9wemnWkT71CF/bWFl2A==}
+  /svelte-adapter-bun/0.2.1:
+    resolution: {integrity: sha512-C5pg8MswoZyWK3eDpSrLo2W2DLuXWx+OhZFt2/UkpkVKzj3c6PhLFKhuj3RJH7tYHWIdpLj4fbsLwiedHhGSbg==}
     dependencies:
       tiny-glob: 0.2.9
     dev: true

@@ -37,4 +37,4 @@ EXPOSE 3000
 
 ENV PORT 3000
 
-CMD ["bun", "run", "start"]
+CMD ["bun", "index.js"]
