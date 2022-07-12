@@ -1,30 +1,32 @@
-@import url(//fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
-
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
+	@font-face {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-display: swap;
+		src: url(//fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap)
+	}
 	body {
 		@apply min-h-screen bg-eerie-700 text-alice-100 antialiased;
 	}
 	h1 {
-		@apply text-[48px] font-black leading-[56.26px];
+		@apply text-[48px] font-bold leading-[56.26px];
 	}
 	h2 {
-		@apply text-[32px] font-black leading-[37.5px];
+		@apply text-[32px] font-bold leading-[37.5px];
 	}
 	h3 {
-		@apply text-[26px] font-black leading-[30.47px];
+		@apply text-[26px] font-bold leading-[30.47px];
 	}
 	h4 {
-		@apply text-[17px] font-black leading-[19.92px];
+		@apply text-[17px] font-bold leading-[19.92px];
 	}
 	h5 {
-		@apply text-[13px] font-bold leading-[15.23px];
+		@apply text-[13px] font-semibold leading-[15.23px];
 	}
 	p {
 		@apply text-[16px] font-normal leading-[18px];
 	}
 }
-
-@tailwind components;
-@tailwind utilities;

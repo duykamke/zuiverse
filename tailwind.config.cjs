@@ -3,9 +3,6 @@ module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
-      fontFamily: {
-        sans: "Roboto, sans-serif",
-      },
       colors: {
         yellow: {
           100: "#F6E8A2",
